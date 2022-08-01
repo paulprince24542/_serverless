@@ -7,7 +7,7 @@ app.use (express.json())
 
 
 app.get("/", (req,res) => {
-    res.send("Api is running serverless")
+    res.send("Api is running serverless....")
 })
 
 
