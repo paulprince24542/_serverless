@@ -31,7 +31,7 @@ OR
 ```
 serverless
 ```
-### Offline view
+### Offline Development
 
 Install dependencies with:
 
@@ -81,59 +81,3 @@ Deploy with:
 ```
 serverless deploy
 ```
-
-### Invocation
-
-After successful deployment, you can call the created application via HTTP:
-
-```bash
-curl https://xxxxxxx.execute-api.us-east-1.amazonaws.com/
-```
-
-Which should result in the following response:
-
-```
-{"message":"Hello from root!"}
-```
-
-Calling the `/hello` path with:
-
-```bash
-curl https://xxxxxxx.execute-api.us-east-1.amazonaws.com/hello
-```
-
-Should result in the following response:
-
-```bash
-{"message":"Hello from path!"}
-```
-
-If you try to invoke a path or method that does not have a configured handler, e.g. with:
-
-```bash
-curl https://xxxxxxx.execute-api.us-east-1.amazonaws.com/nonexistent
-```
-
-You should receive the following response:
-
-```bash
-{"error":"Not Found"}
-```
-
-### Local development
-
-It is also possible to emulate API Gateway and Lambda locally by using `serverless-offline` plugin. In order to do that, execute the following command:
-
-```bash
-serverless plugin install -n serverless-offline
-```
-
-It will add the `serverless-offline` plugin to `devDependencies` in `package.json` file as well as will add it to `plugins` in `serverless.yml`.
-
-After installation, you can start local emulation with:
-
-```
-serverless offline
-```
-
-To learn more about the capabilities of `serverless-offline`, please refer to its [GitHub repository](https://github.com/dherault/serverless-offline).
