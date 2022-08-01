@@ -33,6 +33,12 @@ serverless
 ```
 ### Offline view
 
+Install dependencies with:
+
+```
+npm install
+```
+
 For running the serverless application offline, run
 
 ```
@@ -70,13 +76,7 @@ Server ready: http://localhost:5000 🚀
 
 ### Deployment
 
-Install dependencies with:
-
-```
-npm install
-```
-
-and then deploy with:
+Deploy with:
 
 ```
 serverless deploy
